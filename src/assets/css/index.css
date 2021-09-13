@@ -1,0 +1,108 @@
+/* < 576px */
+
+#root .page {
+  min-height: 100vh;
+}
+img {
+  max-width: 100%;
+}
+.warp {
+  margin: 0 5px;
+}
+#footer {
+  padding: 24px 0;
+}
+.logo {
+  margin-bottom: 0;
+  text-align: center;
+}
+#header {
+  padding: 0;
+}
+#header .ant-menu {
+  line-height: 64px;
+}
+
+.index-nav {
+  margin-top: 10px;
+}
+
+.warp .topics-list {
+  background: #fff;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.topics-tag {
+  margin: 0 5px;
+}
+
+.from-now {
+  text-align: right;
+}
+
+.index-pagination {
+  border-top: 1px solid #f0f0f0;
+  padding: 8px 5px;
+  background: #fff;
+  display: flex;
+}
+.index-pagination > ul {
+  margin: auto;
+}
+
+#topic-detail .ant-card {
+  margin-top: 10px;
+}
+.user-page .ant-card {
+  margin-top: 10px;
+}
+.about-page .ant-card {
+  margin-top: 10px;
+}
+.getstart-page .ant-card {
+  margin-top: 10px;
+}
+.user-details {
+  text-align: center;
+  padding: 20px 0;
+  color: #000;
+}
+/* >= 576px */
+@media all and (min-width: 576px) {
+  .warp {
+    margin: 0 10px;
+  }
+}
+/* >= 768px */
+@media all and (min-width: 768px) {
+  .warp {
+    margin: 0 15px;
+  }
+  .warp .topics-list {
+    padding: 0 20px;
+  }
+}
+/* >= 992px */
+@media all and (min-width: 992px) {
+  .warp {
+    margin: 0 20px;
+  }
+}
+/* >= 1200px */
+@media all and (min-width: 1200px) {
+  .warp {
+    width: 980px;
+    margin: 0 auto;
+  }
+  .warp .topics-list {
+    padding: 0 30px;
+  }
+}
+
+/* >= 1600px */
+@media all and (min-width: 1200px) {
+  .warp {
+    width: 1200px;
+  }
+}

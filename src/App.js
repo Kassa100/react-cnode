@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import { Layout } from "antd";
+import { Route, Switch } from "react-router";
+import { route } from './router/index'
+import Header from "./component/Header";
+import Footer from "./component/Footer";
+
+import './assets/css/index.css'
+export default function App(props) {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Layout className="page">
+        <Header />
+        <Layout.Content>
+          <div className='warp'>
+            <Switch>
+              {route.map((item, index) => {
+                return <Route
+                  key={index}
+                  path={item.path}
+                  exact={item.exact}
+                  render={(props) => {
+                    return item.render(props)
+                  }}
+                />
+              })}
+            </Switch>
+          </div>
+        </Layout.Content>
+        <Footer />
+      </Layout>
+    </>
+  )
 }
-
-export default App;
